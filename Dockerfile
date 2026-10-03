@@ -29,8 +29,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=build /app/publish .
 
-# Expose port 8080
-EXPOSE 8080
+# Expose port 9090
+EXPOSE 9090
 
 # Run the application
 ENTRYPOINT ["dotnet", "ClassProjectApp.dll"]
