@@ -36,7 +36,7 @@ pipeline {
         stage('test health endpoint') {
             steps {
                 /* test health endpoint on localhost:9090 */
-                bat 'curl -i http://localhost:9090/health'
+                bat 'Invoke-WebRequest -Uri "http://localhost:8080/health" -UseBasicParsing'
             }
         }
     }
