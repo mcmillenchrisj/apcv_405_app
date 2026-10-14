@@ -30,7 +30,7 @@ pipeline {
         stage('run docker') {
             steps {
                 /* run application */
-                bat 'docker run -p 9090:8080 mcmillenchrisj/apcv_405_app:latest'
+                bat 'docker run -d mcmillenchrisj/apcv_405_app:latest -p 9090:8080'
             }
         }
         stage('test health endpoint') {
