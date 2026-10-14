@@ -37,7 +37,7 @@ docker build -t mcmillenchrisj/apcv_405_app:latest .
 docker run -p 9090:8080 mcmillenchrisj/apcv_405_app:latest  
 
 Install and setup Jenkins:  
-Go to (https://www.jenkins.io/doc/book/installing/) for installation directions for your machine.  
+Go to https://www.jenkins.io/doc/book/installing/ for installation directions for your machine.  
 After installation, go to http://localhost:8080 to setup Jenkins login credentials for admin user.  
 Then go to plugins and install   
 
