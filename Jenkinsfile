@@ -8,23 +8,33 @@ pipeline {
                 sh 'git clone https://github.com/mcmillenchrisj/apcv_405_app.git'
                 sh 'cd apcv_405_app'
             }
+        }
         stage('run tests') {
+            steps {
                 /* run tests */
                 sh 'dotnet test apcv_405_app.sln'
             }
+        }
         stage('docker build and name image') {
+            steps {
                 /* build docker container */
                 sh 'docker build -t mcmillenchrisj/apcv_405_app:latest .'
             }
+        }
         stage('push to dockerhub') {
+            steps {
                 /* push to dockerhub */
                 sh 'docker push mcmillenchrisj/apcv_405_app:latest'
             }
+        }
         stage('run docker') {
+            steps {
                 /* run application */
                 sh 'docker run -p 9090:8080 mcmillenchrisj/apcv_405_app:latest'
             }
+        }
         stage('test health endpoint') {
+            steps {
                 /* test health endpoint on localhost:9090 */
                 sh 'curl -i http://localhost:9090/health'
             }
