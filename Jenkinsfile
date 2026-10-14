@@ -4,9 +4,16 @@ pipeline {
     stages {
         stage('clone from github') {
             steps {
-                /* clone and go into project application */
-                bat 'git clone https://github.com/mcmillenchrisj/apcv_405_app.git'
-                bat 'cd apcv_405_app'
+                /* check if there was a previous build */
+                script {
+                    if (fileExists('apcv_405_app')) {
+                        bat 'git pull'
+                    } else {
+                        /* clone and go into project application */
+                        bat 'git clone https://github.com/mcmillenchrisj/apcv_405_app.git'
+                        bat 'cd apcv_405_app'
+                    }
+                }
             }
         }
         stage('run tests') {
