@@ -17,7 +17,7 @@ Java SDK v21: https://www.oracle.come/java/technologies/downloads/#jdk21-windows
 Jenkins: https://www.jenkins.io/doc/book/installing/  
 
 ## Application Viewing
-If running the app in the pipeline, you must remove the post section that closes the application from the Jenkinsfile.\
+If running the app in the pipeline, you must remove the post section that closes the application from the Jenkinsfile.  
 If running locally, the application can be viewed on http://localhost:9090
 
 ### Pipeline Status
@@ -25,25 +25,25 @@ If running locally, the application can be viewed on http://localhost:9090
 
 ## Manual Deployment
 
-Get code locally: 
-git clone mcmillenchrisj/apcv_405_app.git
-cd apcv_405_app
+Get code locally:   
+git clone mcmillenchrisj/apcv_405_app.git  
+cd apcv_405_app  
 
-Run tests locally:
-dotnet test apcv_405_app.sln
+Run tests locally:  
+dotnet test apcv_405_app.sln  
 
-Build and run locally with Docker:
-docker build -t mcmillenchrisj/apcv_405_app:latest .
-docker run -p 9090:8080 mcmillenchrisj/apcv_405_app:latest
+Build and run locally with Docker:  
+docker build -t mcmillenchrisj/apcv_405_app:latest .  
+docker run -p 9090:8080 mcmillenchrisj/apcv_405_app:latest  
 
-Install and setup Jenkins:
-Go to (https://www.jenkins.io/doc/book/installing/) for installation directions for your machine.
-After installation, go to http://localhost:8080 to setup Jenkins login credentials for admin user.
-Then go to plugins and install 
+Install and setup Jenkins:  
+Go to (https://www.jenkins.io/doc/book/installing/) for installation directions for your machine.  
+After installation, go to http://localhost:8080 to setup Jenkins login credentials for admin user.  
+Then go to plugins and install   
 
-Create Jenkins pipeline:
-If you do not already have DockerHub credentials, create an account now.
-1. Go to "Manage Jenkins" then "Credentials"
+Create Jenkins pipeline:  
+If you do not already have DockerHub credentials, create an account now.  
+1. Go to "Manage Jenkins" then "Credentials" 
 2. Click on "Add Credentials" then "Username with Password"
 3. Ensure the scope is Global
 4. Type in your DockerHub username and password/access token into the username and password fields.
@@ -59,6 +59,6 @@ If you do not already have DockerHub credentials, create an account now.
 14. The Script Path: JenkinsFile
 15. Save Configuration
 
-Start Pipeline:
+Start Pipeline:  
 Now go to your Jenkins dashboard and click Build Now and monitor the progress of your application.
 
