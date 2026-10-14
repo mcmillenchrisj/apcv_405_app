@@ -26,7 +26,7 @@ If running locally, the application can be viewed on http://localhost:9090
 ## Manual Deployment
 
 Get code locally:   
-git clone mcmillenchrisj/apcv_405_app.git  
+git clone https://github.com/mcmillenchrisj/apcv_405_app.git  
 cd apcv_405_app  
 
 Run tests locally:  
