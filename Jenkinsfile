@@ -55,10 +55,10 @@ pipeline {
             bat 'docker image prune -f'
         }
         success {
-            repoStatusUpdate(state: 'success', description: 'devops-pipeline-build Successfully Completed!')
+            bat 'repoStatusUpdate(state: 'success', description: 'devops-pipeline-build Successfully Completed!')'
         }
         failure {
-            repoStatusUpdate(state: 'failure', description: 'devops-pipeline-build failed.')
+            bat 'repoStatusUpdate(state: 'failure', description: 'devops-pipeline-build failed.')'
         }
     }
 }
