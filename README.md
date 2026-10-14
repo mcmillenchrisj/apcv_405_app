@@ -23,7 +23,7 @@ If running locally, the application can be viewed on http://localhost:9090
 ### Pipeline Status
 - Build: [![Build Status](http://localhost:8080/buildStatus/icon?job=devops-pipeline-project)](http://localhost:8080/job/devops-pipeline-project/)
 
-### Manual Deployment
+## Manual Deployment
 
 Get code locally: 
 git clone mcmillenchrisj/apcv_405_app.git
