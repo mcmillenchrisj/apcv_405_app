@@ -2,12 +2,12 @@
 pipeline {
     agent any
     stages {
-        stage('clone from github') {
+        stage('get files from github') {
             steps {
                 /* check if there was a previous build */
                 script {
                     if (fileExists('apcv_405_app')) {
-                        bat 'git pull'
+                        bat 'git pull origin main'
                     } else {
                         /* clone and go into project application */
                         bat 'git clone https://github.com/mcmillenchrisj/apcv_405_app.git'
