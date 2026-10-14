@@ -37,7 +37,7 @@ pipeline {
         stage('run docker and name container') {
             steps {
                 /* run application */
-                bat 'docker run --name apcv_405_app -p 9090:8080 mcmillenchrisj/apcv_405_app:latest'
+                bat 'docker run -d --name apcv_405_app -p 9090:8080 mcmillenchrisj/apcv_405_app:latest'
             }
         }
         stage('test health endpoint') {
@@ -52,7 +52,7 @@ pipeline {
             /* clean up docker images and containers */
             bat 'docker stop apcv_405_app'
             bat 'docker rm apcv_405_app'
-            bat 'dovker image prune -f'
+            bat 'docker image prune -f'
         }
     }
 }
