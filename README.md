@@ -11,10 +11,10 @@ This project includes an automated CI/CD pipeline to deploy the APCV_405_APP usi
 
 ## Required Software
 Git: https://git-scm.com/downloads
-Docker Desktop: (https://www.docker.com/products/docker-desktop/)
-Java SDK v21: (https://www.oracle.come/java/technologies/downloads/#jdk21-windows)
-.NET8: (https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
-Jenkins: (https://www.jenkins.io/doc/book/installing/)
+Docker Desktop: https://www.docker.com/products/docker-desktop/
+Java SDK v21: https://www.oracle.come/java/technologies/downloads/#jdk21-windows
+.NET8: https://dotnet.microsoft.com/en-us/download/dotnet/8.0
+Jenkins: https://www.jenkins.io/doc/book/installing/
 
 ## Application Viewing
 If running the app in the pipeline, you must remove the post section that closes the application from the Jenkinsfile.
