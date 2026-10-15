@@ -22,7 +22,7 @@ If running locally, the application can be viewed on http://localhost:9090
 
 ### Pipeline Status
 
-![Jenkins Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmcmillenchrisj%2F6edfb69485c4282f1f65097ed8ebaa73%2Fraw%2Fe8ed634e420ded58ef8f53d960572313526caa96%2Fapcv_405_badge.json)
+![Jenkins Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmcmillenchrisj%2F6edfb69485c4282f1f65097ed8ebaa73%2Fraw%2Fbb7b2f661090e9815cb0ed09c751a68cf3db3fcf%2Fapcv_405_badge.json)
 
 
 ## Manual Deployment
