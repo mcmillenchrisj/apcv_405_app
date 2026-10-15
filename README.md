@@ -22,7 +22,7 @@ If running locally, the application can be viewed on http://localhost:9090
 
 ### Pipeline Status
 
-[![Build Status](http://localhost:9090/buildStatus/icon?job=devops-pipeline-project&style=plastic&subject=Pipeline+Build)](http://localhost:9090/job/devops-pipeline-project/)
+![Jenkins Build Status](https://shields.iomcmillenchrisj/apcv_405_badge.json)
 
 ## Manual Deployment
 
