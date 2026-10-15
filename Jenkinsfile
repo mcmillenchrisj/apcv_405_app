@@ -54,11 +54,5 @@ pipeline {
             bat 'docker rm apcv_405_app'
             bat 'docker image prune -f'
         }
-        success {
-            bat repoStatusUpdate(state: 'success', description: 'devops-pipeline-build Successfully Completed!')
-        }
-        failure {
-            bat repoStatusUpdate(state: 'failure', description: 'devops-pipeline-build failed.')
-        }
     }
 }
