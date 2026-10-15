@@ -21,7 +21,8 @@ If running the app in the pipeline, you must remove the post section that closes
 If running locally, the application can be viewed on http://localhost:9090
 
 ### Pipeline Status
-- Build: [![Build Status](http://localhost:8080/buildStatus/icon?job=devops-pipeline-project&style=plastic&subject=Pipeline+Build)](http://localhost:8080/job/devops-pipeline-project/)
+
+- Build: [![Build Status](https://coveted-overbite-trustful.ngrok-free.dev/buildStatus/icon?job=devops-pipeline-project&style=plastic&Subject=Pipeline+Build)](http://localhost:9090)
 
 ## Manual Deployment
 
