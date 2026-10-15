@@ -53,6 +53,49 @@ pipeline {
             bat 'docker stop apcv_405_app'
             bat 'docker rm apcv_405_app'
             bat 'docker image prune -f'
+
+            withCredentials([string(credentialsId: 'github-gists', variable: 'TOKEN')]) {
+                script {
+                    // Determine status parameters based on Jenkins build result
+                    def statusMessage = currentBuild.currentResult
+                    def statusColor = "lightgrey"
+                    
+                    if (statusMessage == "SUCCESS") {
+                        statusColor = "success" // Green
+                    } else if (statusMessage == "UNSTABLE") {
+                        statusColor = "yellow"
+                    } else if (statusMessage == "FAILURE") {
+                        statusColor = "critical" // Red
+                    }
+
+                    // Define your Gist parameters
+                    def gistId = "e8ed634e420ded58ef8f53d960572313526caa96"
+                    def fileName = "apcv_405_badge.json"
+
+                    // Construct the payload matching the Shields.io JSON schema
+                    def payload = """
+                    {
+                        "files": {
+                            "${fileName}": {
+                                "content": "{\\"schemaVersion\\": 1, \\"label\\": \\"jenkins build\\", \\"message\\": \\"${statusMessage}\\", \\"color\\": \\"${statusColor}\\"}"
+                            }
+                        }
+                    }
+                    """
+
+                    // Escape quotes for the shell command
+                    payload = payload.replace('\n', '').trim()
+
+                    // Send the PATCH request to GitHub API
+                    sh """
+                        curl -X PATCH \
+                        -H "Authorization: token ${TOKEN}" \
+                        -H "Accept: application/vnd.github.v3+json" \
+                        -d '${payload}' \
+                        https://github.com{gistId}
+                    """
+                }
+            }
         }
     }
 }
