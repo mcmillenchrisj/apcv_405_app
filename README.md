@@ -20,11 +20,6 @@ Jenkins: https://www.jenkins.io/doc/book/installing/
 If running the app in the pipeline, you must remove the post section that closes the application from the Jenkinsfile.  
 If running locally, the application can be viewed on http://localhost:9090
 
-### Pipeline Status
-
-![Jenkins Build Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fmcmillenchrisj%2F6edfb69485c4282f1f65097ed8ebaa73%2Fraw%2Fbb7b2f661090e9815cb0ed09c751a68cf3db3fcf%2Fapcv_405_badge.json)
-
-
 ## Manual Deployment
 
 Get code locally:   
