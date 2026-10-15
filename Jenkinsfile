@@ -69,7 +69,7 @@ pipeline {
                     }
 
                     // Define your Gist parameters
-                    def gistId = "e8ed634e420ded58ef8f53d960572313526caa96"
+                    def gistId = "6edfb69485c4282f1f65097ed8ebaa73"
                     def fileName = "apcv_405_badge.json"
 
                     // Construct the payload matching the Shields.io JSON schema
@@ -87,7 +87,7 @@ pipeline {
                     payload = payload.replace('\n', '').trim()
 
                     // Send the PATCH request to GitHub API
-                    sh """
+                    bat """
                         curl -X PATCH \
                         -H "Authorization: token ${TOKEN}" \
                         -H "Accept: application/vnd.github.v3+json" \
