@@ -53,7 +53,6 @@ pipeline {
             bat 'docker stop apcv_405_app'
             bat 'docker rm apcv_405_app'
             bat 'docker image prune -f'
-            }
         }
     }
 }
