@@ -22,7 +22,7 @@ If running locally, the application can be viewed on http://localhost:9090
 
 ### Pipeline Status
 
-- Build: [![Build Status](https://coveted-overbite-trustful.ngrok-free.dev/buildStatus/icon?job=devops-pipeline-project&style=plastic&Subject=Pipeline+Build)](http://localhost:9090)
+[![Build Status](http://localhost:9090/buildStatus/icon?job=devops-pipeline-project&style=plastic&subject=Pipeline+Build)](http://localhost:9090/job/devops-pipeline-project/)
 
 ## Manual Deployment
 
