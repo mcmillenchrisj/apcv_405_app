@@ -69,7 +69,6 @@ pipeline {
                     }
 
                     // Define your Gist parameters
-                    def gistId = "6edfb69485c4282f1f65097ed8ebaa73"
                     def fileName = "apcv_405_badge.json"
 
                     // Construct the payload matching the Shields.io JSON schema
@@ -92,7 +91,7 @@ pipeline {
                         -H "Authorization: token ${TOKEN}" \
                         -H "Accept: application/vnd.github.v3+json" \
                         -d '${payload}' \
-                        https://github.com{gistId}
+                        https://github.com/gists/6edfb69485c4282f1f65097ed8ebaa73
                     """
                 }
             }
